@@ -1,0 +1,8 @@
+{
+  "name": "Pyramid Makkah Marketplace",
+  "description": "Exclusive marketplace for Kurban, Aqiqah, and Dam services in Makkah, Saudi Arabia, featuring transparent Shariah documentation and multi-language support.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
