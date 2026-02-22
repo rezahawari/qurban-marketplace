@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Language, User } from '../types';
 import { translations } from '../translations';
 import LanguageSwitcher from './LanguageSwitcher';
+import { logo } from '../assets/logo.png';
 
 interface Props {
   children: React.ReactNode;
@@ -44,7 +45,7 @@ const Layout: React.FC<Props> = ({
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <div className="flex items-center gap-3 cursor-pointer group" onClick={() => navigate('home')}>
-              <img src="../assets/logo.png" alt="PIRAMID logo" className="w-11 h-11 rounded-xl object-cover shadow-md" />
+              <img src={logo} alt="PIRAMID logo" className="w-11 h-11 rounded-xl object-cover shadow-md" />
               <div className="flex flex-col">
                 <span className="text-2xl font-black text-brand-maroon leading-none tracking-tighter group-hover:text-brand-maroon_dark transition-colors">PIRAMID</span>
                 <span className="text-[10px] font-bold text-amber-600 uppercase tracking-[0.2em] leading-none mt-1">Makkah</span>
