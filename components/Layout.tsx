@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Language, User } from '../types';
 import { translations } from '../translations';
 import LanguageSwitcher from './LanguageSwitcher';
-import { logo } from '../assets/logo.png';
+// using static public asset for logo: /logo.png
 
 interface Props {
   children: React.ReactNode;
@@ -23,6 +23,7 @@ const Layout: React.FC<Props> = ({
   const t = translations[lang];
   const isRtl = lang === 'ar';
   const [showDropdown, setShowDropdown] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const NavItem = ({ page, label }: { page: string, label: string }) => (
     <button 
@@ -45,7 +46,16 @@ const Layout: React.FC<Props> = ({
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <div className="flex items-center gap-3 cursor-pointer group" onClick={() => navigate('home')}>
-              <img src={logo} alt="PIRAMID logo" className="w-11 h-11 rounded-xl object-cover shadow-md" />
+              {!logoError ? (
+                <img
+                  src="/logo.png"
+                  alt="PIRAMID logo"
+                  className="w-11 h-11 rounded-xl object-cover shadow-md"
+                  onError={() => setLogoError(true)}
+                />
+              ) : (
+                <div className="w-11 h-11 rounded-xl bg-brand-maroon_light flex items-center justify-center text-white font-black text-xl shadow-md">P</div>
+              )}
               <div className="flex flex-col">
                 <span className="text-2xl font-black text-brand-maroon leading-none tracking-tighter group-hover:text-brand-maroon_dark transition-colors">PIRAMID</span>
                 <span className="text-[10px] font-bold text-amber-600 uppercase tracking-[0.2em] leading-none mt-1">Makkah</span>
