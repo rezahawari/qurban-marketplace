@@ -25,7 +25,7 @@ const Home: React.FC<Props> = ({ lang, blogPosts, onOrder, onNavigateBlog, onRea
     {
       title: "Peternakan Premium",
       category: "Kualitas Hewan",
-      image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=800",
+      image: "https://images.unsplash.com/photo-1700299926955-d68c16ba107b?auto=format&fit=crop&q=80&w=800",
       size: "large"
     },
     {
