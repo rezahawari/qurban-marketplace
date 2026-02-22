@@ -104,7 +104,7 @@ export const MOCK_BLOG_POSTS: BlogPost[] = [
     content: 'Aqiqah disunnahkan dilakukan pada hari ketujuh kelahiran sang buah hati. Memilih hewan yang sehat dan sesuai syariat adalah langkah awal yang sangat penting...', 
     author: 'Admin Pyramid', 
     date: '12 Mei 2024',
-    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1700299926955-d68c16ba107b?auto=format&fit=crop&q=80&w=800',
     category: 'Panduan',
     status: 'published'
   },
